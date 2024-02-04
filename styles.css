@@ -52,11 +52,37 @@ header {
 }
 
 .menu-nav {
+  color: var(--NAVY-BLUE, #2e2f42);
   gap: 40px;
   margin-top: 24px;
   margin-bottom: 24px;
   display: flex;
   list-style: none;
+}
+
+.menu-nav a {
+  text-decoration: none;
+  position: relative;
+  color: var(--NAVY-BLUE, #2e2f42);
+}
+
+.menu-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.menu-nav a:hover,
+.menu-nav a:focus {
+  color: #404bbf;
+}
+.menu-nav a:hover::after {
+  background-color: #404bbf;
 }
 
 .contacts {
@@ -98,6 +124,11 @@ header {
   justify-content: center;
   align-items: center;
   background: var(--NAVY-BLUE, #2e2f42);
+  background-image: url('images/heroBackground.jpg');
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url('images/heroBackground.jpg');
 }
 
 .content-container {
@@ -152,6 +183,17 @@ button {
   width: 264px;
 }
 
+.section1 div .icon1 {
+  width: 264px;
+  height: 112px;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  background: linear-gradient(0deg, #f4f4fd, #f4f4fd), linear-gradient(0deg, #8e8f99, #8e8f99);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .section1 h3 {
   color: var(--NAVY-BLUE, #2e2f42);
   font-family: Roboto;
@@ -160,6 +202,8 @@ button {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.4px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .section1 span {
@@ -226,7 +270,7 @@ button {
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 10px;
   letter-spacing: 0.4px;
 }
 
@@ -237,8 +281,18 @@ button {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 10px;
   letter-spacing: 0.32px;
+}
+
+.section2 .team-member ul .elipse {
+  width: 40px;
+  height: 40px;
+  background: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .section3 {
@@ -259,6 +313,12 @@ button {
   list-style: none;
 }
 
+.section3 ul li:hover,
+.section3 ul li:focus {
+  outline: none;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
 .section3 h2 {
   color: var(--NAVY-BLUE, #2e2f42);
   text-align: center;
@@ -275,7 +335,6 @@ button {
   display: flex;
   width: 360px;
   height: 420px;
-  padding-bottom: 32px;
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
@@ -283,6 +342,7 @@ button {
   border: 1px solid var(--CORNFLOWER, #e7e9fc);
   background: var(--WHITE, #fff);
   background-color: var(--WHITE, #fff);
+  overflow: hidden;
 }
 
 .section3 .portfolio-item h3 {
@@ -293,6 +353,7 @@ button {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.4px;
+  padding-left: 20px;
 }
 
 .section3 .portfolio-item span {
@@ -303,6 +364,8 @@ button {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.32px;
+  padding-left: 20px;
+  padding-bottom: 50px;
 }
 
 /* footer */
@@ -337,4 +400,37 @@ footer span {
 
 .footer-text ul {
   list-style: none;
+}
+
+.footer-social {
+  width: 280px;
+  margin-left: 540px;
+}
+
+.social-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-social span {
+  margin-bottom: 12px;
+}
+
+.footer-social ul {
+  display: flex;
+
+  align-items: center;
+  list-style: none;
+}
+
+.footer-social ul .elipse {
+  width: 40px;
+  height: 40px;
+  background: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
 }
