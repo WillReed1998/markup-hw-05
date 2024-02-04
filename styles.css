@@ -343,6 +343,41 @@ button {
   background: var(--WHITE, #fff);
   background-color: var(--WHITE, #fff);
   overflow: hidden;
+  position: relative;
+}
+
+.section3 .image {
+  position: relative;
+}
+
+.section3 .overlay {
+  width: 360px;
+  height: 304px;
+  background: #4d5ae5;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  transition: bottom 0.3s ease;
+  z-index: 0;
+  opacity: 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.section3 .image:hover .overlay {
+  bottom: 0;
+  opacity: 1;
+}
+
+.section3 .overlay span {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: var(--WHITE, #fff);
 }
 
 .section3 .portfolio-item h3 {
