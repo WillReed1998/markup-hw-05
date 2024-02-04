@@ -365,7 +365,7 @@ button {
   align-items: center;
 }
 
-.section3 .image:hover .overlay {
+.section3 .portfolio-item:hover .overlay {
   bottom: 0;
   opacity: 1;
 }
