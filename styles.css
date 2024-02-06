@@ -12,6 +12,10 @@ p {
 
 body {
   background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 header {
@@ -361,7 +365,7 @@ button {
   z-index: 0;
   opacity: 0;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
 }
 
@@ -468,4 +472,50 @@ footer span {
   justify-content: center;
   align-items: center;
   margin-right: 12px;
+}
+
+.backdrop {
+  width: 408px;
+  height: 584px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  padding: 4px;
+  border: none;
+  background: linear-gradient(0deg, #e7e9fc, #e7e9fc),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  border: 1px solid #0000001a;
+  border-radius: 50%;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: Fixed (360px);
+  height: Hug (336px);
+  top: 192px;
+  left: 540px;
+  border-radius: 4px;
+  gap: 8px;
+}
+
+.form h1 {
+font-family: Roboto;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0.02em;
+text-align: center;
+color: #2E2F42;
 }
